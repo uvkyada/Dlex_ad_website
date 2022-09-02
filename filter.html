@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Filter || Dlex Admin</title>
+      <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <div class="main d-flex">
+         <div class="side-menu vh-100 bg-white position-sticky top-0 pl-3 z-5">
+            <div class="logo py-25">
+               <svg class="w-28" width="153" height="58" viewBox="0 0 153 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M61.5369 7.20508V47.6452H74.0164C84.2462 47.6452 90.261 40.1343 90.261 27.3271C90.261 14.5196 84.2225 7.20508 74.0164 7.20508H61.5369ZM67.6465 13.3145H73.377C80.1969 13.3145 84.033 18.3029 84.033 27.3551C84.033 36.5751 80.2442 41.5357 73.377 41.5357H67.6465V13.3145Z" fill="#222132" />
+                  <path d="M94.689 47.6452H100.585V7.20508H94.689V47.6452Z" fill="#222132" />
+                  <path d="M122.229 38.7612C121.59 41.2276 119.506 42.8528 116.759 42.8528C112.899 42.8528 110.436 39.658 110.436 34.8938V34.4734H127.983V32.2034C127.983 23.1794 123.532 17.3223 116.404 17.3223C109.158 17.3223 104.564 23.5157 104.564 32.9041C104.564 42.3764 109.11 48.2336 116.641 48.2336C122.584 48.2336 126.989 44.3664 127.747 38.7612H122.229ZM116.428 22.731C119.814 22.731 122.087 25.6737 122.206 29.8774H110.484C110.721 25.7297 113.112 22.731 116.428 22.731Z" fill="#222132" />
+                  <path d="M141.173 36.9963L146.383 47.646H152.824L144.844 32.6245L152.919 17.9395H146.454L141.457 28.3648H141.339L136.272 17.9395H129.641L137.669 32.8206L129.57 47.646H135.845L141.055 36.9963H141.173Z" fill="#222132" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2644 57.4259C37.649 57.4154 48.4965 44.5713 48.4965 28.7286C48.4965 12.8858 37.649 0.0415572 24.2644 0.03125C33.748 4.72143 40.4121 15.8039 40.4121 28.7286C40.4121 41.653 33.748 52.7355 24.2644 57.4259Z" fill="#2BC155" fill-opacity="0.16" />
+                  <path d="M0 4.03125C0 1.82211 1.79086 0.03125 4 0.03125H14.1453C27.5372 0.03125 38.3934 12.8794 38.3934 28.7285C38.3934 44.5776 27.5372 57.4258 14.1453 57.4258H4C1.79086 57.4258 0 55.6349 0 53.4258V4.03125Z" fill="#2BC155" />
+               </svg>
+            </div>
+            <ul class="text-left mb-0">
+               <li class="position-relative">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M8.15722 19.7714V16.7047C8.1572 15.9246 8.79312 15.2908 9.58101 15.2856H12.4671C13.2587 15.2856 13.9005 15.9209 13.9005 16.7047V16.7047V19.7809C13.9003 20.4432 14.4343 20.9845 15.103 21H17.0271C18.9451 21 20.5 19.4607 20.5 17.5618V17.5618V8.83784C20.4898 8.09083 20.1355 7.38935 19.538 6.93303L12.9577 1.6853C11.8049 0.771566 10.1662 0.771566 9.01342 1.6853L2.46203 6.94256C1.86226 7.39702 1.50739 8.09967 1.5 8.84736V17.5618C1.5 19.4607 3.05488 21 4.97291 21H6.89696C7.58235 21 8.13797 20.4499 8.13797 19.7714V19.7714" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Dashboard 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.10254 9.22725H20.9069" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.9348 13.5664H15.9451" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.0051 13.5664H11.0154" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.06372 13.5664H6.07401" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.9348 17.8845H15.9451" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.0051 17.8845H11.0154" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.06372 17.8845H6.07401" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.4927 1V4.65642" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.51809 1V4.65642" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7092 2.75464H6.30107C3.03808 2.75464 1 4.57234 1 7.91356V17.9687C1 21.3625 3.03808 23.2222 6.30107 23.2222H15.6989C18.9722 23.2222 21 21.394 21 18.0528V7.91356C21.0103 4.57234 18.9825 2.75464 15.7092 2.75464Z" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Calendar 
+                  </a>
+               </li>
+               <li class="position-relative mt-2 active">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M11.4923 2.78906H7.7533C4.6783 2.78906 2.75031 4.96606 2.75031 8.04806V16.3621C2.75031 19.4441 4.6693 21.6211 7.7533 21.6211H16.5773C19.6623 21.6211 21.5813 19.4441 21.5813 16.3621V12.3341" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82782 10.9205L16.3008 3.4475C17.2318 2.5175 18.7408 2.5175 19.6718 3.4475L20.8888 4.6645C21.8198 5.5955 21.8198 7.1055 20.8888 8.0355L13.3798 15.5445C12.9728 15.9515 12.4208 16.1805 11.8448 16.1805H8.09882L8.19282 12.4005C8.20682 11.8445 8.43382 11.3145 8.82782 10.9205Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.1652 4.60156L19.7312 9.16756" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Create New Ads 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50083 13.7871V13.5681C3.53295 12.9202 3.7406 12.2925 4.10236 11.7496C4.7045 11.0975 5.1167 10.2983 5.29571 9.43598C5.29571 8.7695 5.29571 8.0935 5.35393 7.42703C5.65469 4.21842 8.82728 2 11.9611 2H12.0387C15.1725 2 18.345 4.21842 18.6555 7.42703C18.7137 8.0935 18.6555 8.7695 18.704 9.43598C18.8854 10.3003 19.2972 11.1019 19.8974 11.7591C20.2618 12.2972 20.4698 12.9227 20.4989 13.5681V13.7776C20.5206 14.648 20.2208 15.4968 19.6548 16.1674C18.907 16.9515 17.8921 17.4393 16.8024 17.5384C13.607 17.8812 10.383 17.8812 7.18762 17.5384C6.09914 17.435 5.08576 16.9479 4.33521 16.1674C3.778 15.4963 3.48224 14.6526 3.50083 13.7871Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M9.55493 20.8516C10.0542 21.4782 10.7874 21.8838 11.5922 21.9785C12.3971 22.0732 13.2072 21.8493 13.8433 21.3562C14.0389 21.2103 14.2149 21.0408 14.3672 20.8516" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Notification 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M21.6389 14.3962H17.5906C16.1042 14.3953 14.8993 13.1914 14.8984 11.7049C14.8984 10.2185 16.1042 9.01458 17.5906 9.01367H21.6389" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M18.0486 11.6432H17.7369" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.74766 3H16.3911C19.2892 3 21.6388 5.34951 21.6388 8.24766V15.4247C21.6388 18.3229 19.2892 20.6724 16.3911 20.6724H7.74766C4.84951 20.6724 2.5 18.3229 2.5 15.4247V8.24766C2.5 5.34951 4.84951 3 7.74766 3Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M7.03558 7.53772H12.4345" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Payment 
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="panal bg-light position-relative max-vh-100">
+            <div class="top-menu d-flex bg-white w-100 px-2 align-items-center py-1 position-sticky top-0 z-5">
+               <form action="#" class="d-flex align-items-center bg-light mr-3 pl-2 rounded-pill">
+                  <svg class="d-block" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10.0617 19.3113C12.2963 19.3114 14.4669 18.5956 16.2298 17.2772L22.8806 23.6629C23.3774 24.1236 24.1691 24.1104 24.6489 23.6334C25.117 23.1681 25.117 22.4303 24.6489 21.965L17.9981 15.5793C21.4053 11.3681 20.6119 5.3023 16.2259 2.03089C11.8399 -1.24052 5.52239 -0.478718 2.11519 3.73247C-1.29201 7.94365 -0.49859 14.0095 3.8874 17.2809C5.65315 18.5979 7.82573 19.3124 10.0617 19.3113ZM4.71787 4.52615C7.66923 1.69235 12.4543 1.6923 15.4058 4.52604C18.3572 7.35978 18.3572 11.9542 15.4059 14.788C12.4545 17.6218 7.66939 17.6218 4.71797 14.7881C4.71792 14.788 4.71792 14.788 4.71787 14.788C1.7665 11.9749 1.74911 7.39723 4.67897 4.56349C4.69192 4.55101 4.70487 4.53858 4.71787 4.52615Z" fill="#2BC155" />
+                  </svg>
+                  <input type="search" placeholder="Search here" class="bg-transparent px-2 py-15" />
+               </form>
+               <div class="notification w-12 h-12 text-center p-1 d-flex align-items-center justify-content-center bg-light mr-15 rounded-circle position-relative ml-auto">
+                  <span class="w-12 h-auto d-inline-block">
+                     <svg class="w-5 m-auto" width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.08431 15.0856V14.8301C1.12179 14.0743 1.36404 13.3419 1.78609 12.7085C2.4886 11.9477 2.9695 11.0153 3.17834 10.0093C3.17834 9.23174 3.17834 8.44307 3.24626 7.66551C3.59715 3.92214 7.2985 1.33398 10.9546 1.33398H11.0451C14.7012 1.33398 18.4026 3.92214 18.7648 7.66551C18.8327 8.44307 18.7648 9.23174 18.8214 10.0093C19.033 11.0177 19.5134 11.9529 20.2136 12.7196C20.6388 13.3474 20.8815 14.0771 20.9154 14.8301V15.0745C20.9407 16.09 20.5909 17.0803 19.9306 17.8626C19.0581 18.7774 17.8741 19.3465 16.6028 19.4622C12.8748 19.8621 9.11355 19.8621 5.38557 19.4622C4.11568 19.3415 2.93339 18.7732 2.05775 17.8626C1.40768 17.0797 1.06262 16.0953 1.08431 15.0856Z" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.14743 23.3281C8.72992 24.0592 9.5853 24.5324 10.5243 24.6429C11.4632 24.7534 12.4084 24.4921 13.1505 23.9168C13.3787 23.7467 13.5841 23.5489 13.7617 23.3281" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                  </span>
+               </div>
+               <div class="setting w-12 h-12 text-center p-1 d-flex align-items-center justify-content-center bg-light rounded-circle mr-15 position-relative">
+                  <span class="w-12 h-auto d-inline-block">
+                     <svg class="w-5 m-auto" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2744 7.89466L21.5482 6.63456C20.9339 5.56832 19.5725 5.20049 18.5048 5.81228V5.81228C17.9965 6.11168 17.3901 6.19663 16.8191 6.04838C16.2482 5.90014 15.7597 5.53088 15.4613 5.02205C15.2693 4.69862 15.1662 4.33024 15.1623 3.95416V3.95416C15.1796 3.35121 14.9521 2.76692 14.5317 2.3344C14.1112 1.90187 13.5336 1.65795 12.9304 1.6582H11.4674C10.8764 1.6582 10.3098 1.89368 9.89296 2.31255C9.47609 2.73142 9.24333 3.29914 9.24617 3.89009V3.89009C9.22866 5.11019 8.23452 6.09006 7.01429 6.08993C6.63821 6.08603 6.26983 5.98288 5.9464 5.79093V5.79093C4.8787 5.17913 3.51726 5.54696 2.90292 6.6132L2.12336 7.89466C1.50977 8.95957 1.87259 10.3202 2.93496 10.9381V10.9381C3.62551 11.3368 4.05091 12.0736 4.05091 12.871C4.05091 13.6684 3.62551 14.4052 2.93496 14.8039V14.8039C1.87394 15.4177 1.51072 16.775 2.12336 17.8367V17.8367L2.86021 19.1075C3.14805 19.6269 3.631 20.0101 4.20218 20.1725C4.77337 20.3348 5.38571 20.2628 5.90368 19.9725V19.9725C6.41289 19.6753 7.01968 19.5939 7.58919 19.7463C8.1587 19.8987 8.64373 20.2723 8.93648 20.7841C9.12844 21.1075 9.23159 21.4759 9.23549 21.8519V21.8519C9.23549 23.0846 10.2347 24.0838 11.4674 24.0838H12.9304C14.1589 24.0838 15.1564 23.0911 15.1623 21.8626V21.8626C15.1594 21.2698 15.3936 20.7005 15.8128 20.2813C16.232 19.8621 16.8013 19.6279 17.3942 19.6307C17.7693 19.6408 18.1362 19.7435 18.462 19.9298V19.9298C19.5269 20.5433 20.8875 20.1805 21.5055 19.1182V19.1182L22.2744 17.8367C22.572 17.3259 22.6537 16.7175 22.5014 16.1462C22.349 15.575 21.9753 15.088 21.4628 14.7932V14.7932C20.9503 14.4984 20.5766 14.0115 20.4242 13.4402C20.2719 12.869 20.3536 12.2606 20.6512 11.7497C20.8447 11.4118 21.1249 11.1317 21.4628 10.9381V10.9381C22.5188 10.3205 22.8808 8.96786 22.2744 7.90534V7.90534V7.89466Z" stroke="#FD6162" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <ellipse cx="12.2042" cy="12.8704" rx="3.07551" ry="3.07551" stroke="#FD6162" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                  </span>
+               </div>
+               <div class="user-profile d-flex align-items-center justify-content-center">
+                  <div class="user-text d-flex flex-column pr-15">
+                     <span class="name font-weight-400 text-sm">Samantha</span>
+                     <span class="sub-name text-xs">Peterdraw.co</span>
+                  </div>
+                  <div class="w-12">
+                     <img src="images/user-img.jpg" class="image w-12 h-12 object-cover overflow-hidden rounded-pill" />
+                  </div>
+               </div>
+            </div>
+            <div class="app-list">
+               <div class="top-line d-flex justify-content-between align-items-center px-2 pt-4 pb-2">
+                  <h1 class="text-3xl">Filter</h1>
+                  <div class="right-part d-flex align-items-center">
+                     <a href="filter.html">
+                        <div class="filter p-1 bg-white mr-3">
+                           <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M13.5441 23.8083H4.10834" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8929 23.8093C27.8929 25.8839 26.211 27.5658 24.1363 27.5658C22.0617 27.5658 20.3798 25.8839 20.3798 23.8093C20.3798 21.733 22.0617 20.0527 24.1363 20.0527C26.211 20.0527 27.8929 21.733 27.8929 23.8093Z" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M18.4557 8.51726H27.893" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.10773 8.51629C4.10773 10.5925 5.78957 12.2728 7.86425 12.2728C9.93893 12.2728 11.6208 10.5925 11.6208 8.51629C11.6208 6.44161 9.93893 4.75977 7.86425 4.75977C5.78957 4.75977 4.10773 6.44161 4.10773 8.51629Z" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </a>
+                     <a href="creatadnewad.html">
+                     <button class="prime-btn px-35 py-15">+ Create New Ad</button>
+                     </a>
+                  </div>
+               </div>
+               <div class="middel-part filter px-2 px-lg-3 px-xxl-4 position-relative overflow-hidden">
+                  <div  id="FillterBox" class="bg-white top-0 inset-x-0 z-5 d-flex- overflow-auto py-1  text-xs dark-gray">
+                     <div class="row px-1 mx-0">
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">App name</h3>
+                           <select class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleFormControlSelect1">
+                              <option>Select App 1</option>
+                              <option>Select App 2</option>
+                              <option>Select App 3</option>
+                              <option>Select App 4</option>
+                              <option>Select App 5</option>
+                           </select>
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Brand Name</h3>
+                           <input type="text" class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleInputbrand-name" placeholder="Damas ">
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Campaign</h3>
+                           <input type="text" class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleInputbrand-name" placeholder="Flipkart">
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Date</h3>
+                           <input type="date" class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2 iconRight-top icon-2" id="cname" placeholder="Company Name">
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Ads Status </h3>
+                           <select class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleFormControlSelect1">
+                              <option>Select App 1</option>
+                              <option>Select App 2</option>
+                              <option>Select App 3</option>
+                              <option>Select App 4</option>
+                              <option>Select App 5</option>
+                           </select>
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Ads Place</h3>
+                           <input type="text" class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleInputbrand-name" placeholder="Top">
+                        </div>
+                        <div class="col-3 col-xl-2 col-xxl px-1 py-50">
+                           <h3 class="text-left mb-0 text-sm">Ads Position </h3>
+                           <select class="input-box-filter border w-100 py-50 px-1 mt-1 rounded-2" id="exampleFormControlSelect1">
+                              <option>Select App 1</option>
+                              <option>Select App 2</option>
+                              <option>Select App 3</option>
+                              <option>Select App 4</option>
+                              <option>Select App 5</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <table id="example" class="display responsive nowrap text-xs text-xxl-sm" cellspacing="0" width="100%">
+                     <thead>
+                        <tr class="bg-white">
+                           <th class="text-center py-25 px-2">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </th>
+                           <th class="text-center py-25 ">Logo</th>
+                           <th class="text-center py-25 ">App</th>
+                           <th class="text-center py-25 ">Brand Name</th>
+                           <th class="text-center py-25 ">Campaign</th>
+                           <th class="text-center py-25 ">Thumbnail</th>
+                           <th class="text-center py-25 ">Start Date</th>
+                           <th class="text-center py-25 ">End Date</th>
+                           <th class="text-center py-25 ">Status</th>
+                           <th class="text-center py-25 ">Place</th>
+                           <th class="text-center py-25 ">Position</th>
+                           <th class="text-center py-25 "></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="bg-white">
+                           <td class="py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class="py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-1.png" alt=""> </div>
+                           </td>
+                           <td class="py-15 text-center border-0">Facebook</td>
+                           <td class="py-15 text-center border-0">Digital Daily Deals</td>
+                           <td class="py-15 text-center border-0">E-commerce</td>
+                           <td class="py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-1.png" alt=""> </div>
+                           </td>
+                           <td class="py-15 text-center border-0">07/02/2022</td>
+                           <td class="py-15 text-center border-0">15/02/2022</td>
+                           <td class="py-15 text-center border-0">Deactiva</td>
+                           <td class="py-15 text-center border-0">Bottam</td>
+                           <td class="py-15 text-center border-0">One</td>
+                           <td class="py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Instagram</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Amazon</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Flipkart</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-1.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Digital Daily Deals</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-1.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Deactiva</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Instagram</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Amazon</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Flipkart</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-1.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Digital Daily Deals</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-1.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Deactiva</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Instagram</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-2.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Amazon</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Flipkart</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Amazon</td>
+                           <td class=" py-15 text-center border-0">SmartBuy</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-3.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Top</td>
+                           <td class=" py-15 text-center border-0">Two</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr class="bg-white">
+                           <td class=" py-15 text-center px-2 ">
+                              <label class="box d-flex align-items-center justify-content-center position-relative mb-0">
+                                 <input type="checkbox" class="">
+                                 <svg class="position-absolute" width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30" rx="6" fill="#2BC155" />
+                                    <path d="M13.1249 18.7064L23.4158 8L25 9.64678L13.1249 22L6 14.5883L7.58305 12.9415L13.1249 18.7064Z" fill="white" />
+                                 </svg>
+                              </label>
+                           </td>
+                           <td class=" py-15 text-center ">
+                              <div class="logo m-auto"> <img src="images/logo-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">Facebook</td>
+                           <td class=" py-15 text-center border-0">Flipkart</td>
+                           <td class=" py-15 text-center border-0">E-commerce</td>
+                           <td class=" py-15 text-center ">
+                              <div class="ad-baner m-auto d-flex align-items-center"> <img src="images/banner-4.png" alt=""> </div>
+                           </td>
+                           <td class=" py-15 text-center border-0">07/02/2022</td>
+                           <td class=" py-15 text-center border-0">15/02/2022</td>
+                           <td class=" py-15 text-center border-0">Active</td>
+                           <td class=" py-15 text-center border-0">Bottam</td>
+                           <td class=" py-15 text-center border-0">One</td>
+                           <td class=" py-15 text-center border-0">
+                              <div class="dropdown dropleft">
+                                 <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path d="M9.39584 10.9999C9.39584 9.9874 10.2166 9.16659 11.2292 9.16659C12.2417 9.16659 13.0625 9.9874 13.0625 10.9999C13.0625 12.0124 12.2417 12.8333 11.2292 12.8333C10.2166 12.8333 9.39584 12.0124 9.39584 10.9999Z" fill="#23314B"/>
+                                       <path d="M9.39584 18.3334C9.39584 17.3209 10.2166 16.5001 11.2292 16.5001C12.2417 16.5001 13.0625 17.3209 13.0625 18.3334C13.0625 19.3459 12.2417 20.1667 11.2292 20.1667C10.2166 20.1667 9.39584 19.3459 9.39584 18.3334Z" fill="#23314B"/>
+                                       <path d="M9.39584 3.66667C9.39584 2.65415 10.2166 1.83334 11.2292 1.83334C12.2417 1.83334 13.0625 2.65415 13.0625 3.66667C13.0625 4.67919 12.2417 5.5 11.2292 5.5C10.2166 5.5 9.39584 4.67919 9.39584 3.66667Z" fill="#23314B"/>
+                                    </svg>
+                                 </div>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="creatadnewad.html">Edit</a> <a class="dropdown-item" href="" data-toggle="modal" data-target="#exampleModalCenter1">View</a> <a class="dropdown-item" href="report.html">Report</a> <a class="dropdown-item" href="#">Delete</a> </div>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade bd-example-modal-lg backdrop-fillter" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered max-w-screen-md px-15 px-lg-3" role="document">
+            <div class="modal-content bg-white py-3 px-3 px-lg-3">
+               <div class="modal-header border-0">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+               </div>
+               <div class="modal-body p-0">
+                  <div class="user-detail">
+                     <div class="user-top">
+                        <div class="user-image d-flex justify-content-between align-items-center">
+                           <div class="images d-flex align-items-center">
+                              <img src="images/logo-1.png" alt="" class="border" width="100px" height="100px">
+                              <div class="user-name pl-2">
+                                 <h6 class="mb-0">Digital Daily Deals</h6>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row pt-4 w-100">
+                           <div class="col">
+                              <div class="box bg-light border overflow-hidden d-flex align-items-center" style="width:100%; height: 337px; border-radius: 12px;"> <img src="images/banner-5.png" alt=""> </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row pt-4 px-0">
+                        <div class="col">
+                           <h4>Brand Name</h4>
+                           <p>SmartBuy</p>
+                        </div>
+                        <div class="col">
+                           <h4>Campaign Name</h4>
+                           <p>E-commerce Ads</p>
+                        </div>
+                        <div class="col">
+                           <h4>Total Ads</h4>
+                           <p>15 Ads</p>
+                        </div>
+                     </div>
+                     <div class="row pt-2">
+                        <div class="col">
+                           <h4>Ads Status</h4>
+                           <p>6 Active</p>
+                        </div>
+                        <div class="col">
+                           <h4>Deactiva Ads</h4>
+                           <p>10 Deactiva</p>
+                        </div>
+                        <div class="col">
+                           <h4>Poster type</h4>
+                           <p>Video</p>
+                        </div>
+                     </div>
+                     <div class="row toggle d-flex flex-column">
+                        <h4 class="mb-2">Application Ads Activate / Deactivate</h4>
+                        <input type="checkbox" id="switch" checked />
+                        <label for="switch"></label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- JS -->
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/Dlex.js"></script>
+   </body>
+</html>

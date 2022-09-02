@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dlex admin page ||  Dlex Admin</title>
+      <link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <div class="main d-flex">
+         <div class="side-menu vh-100 bg-white position-sticky top-0 pl-3 z-5">
+            <div class="logo py-25">
+               <svg class="w-28" width="153" height="58" viewBox="0 0 153 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M61.5369 7.20508V47.6452H74.0164C84.2462 47.6452 90.261 40.1343 90.261 27.3271C90.261 14.5196 84.2225 7.20508 74.0164 7.20508H61.5369ZM67.6465 13.3145H73.377C80.1969 13.3145 84.033 18.3029 84.033 27.3551C84.033 36.5751 80.2442 41.5357 73.377 41.5357H67.6465V13.3145Z" fill="#222132" />
+                  <path d="M94.689 47.6452H100.585V7.20508H94.689V47.6452Z" fill="#222132" />
+                  <path d="M122.229 38.7612C121.59 41.2276 119.506 42.8528 116.759 42.8528C112.899 42.8528 110.436 39.658 110.436 34.8938V34.4734H127.983V32.2034C127.983 23.1794 123.532 17.3223 116.404 17.3223C109.158 17.3223 104.564 23.5157 104.564 32.9041C104.564 42.3764 109.11 48.2336 116.641 48.2336C122.584 48.2336 126.989 44.3664 127.747 38.7612H122.229ZM116.428 22.731C119.814 22.731 122.087 25.6737 122.206 29.8774H110.484C110.721 25.7297 113.112 22.731 116.428 22.731Z" fill="#222132" />
+                  <path d="M141.173 36.9963L146.383 47.646H152.824L144.844 32.6245L152.919 17.9395H146.454L141.457 28.3648H141.339L136.272 17.9395H129.641L137.669 32.8206L129.57 47.646H135.845L141.055 36.9963H141.173Z" fill="#222132" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2644 57.4259C37.649 57.4154 48.4965 44.5713 48.4965 28.7286C48.4965 12.8858 37.649 0.0415572 24.2644 0.03125C33.748 4.72143 40.4121 15.8039 40.4121 28.7286C40.4121 41.653 33.748 52.7355 24.2644 57.4259Z" fill="#2BC155" fill-opacity="0.16" />
+                  <path d="M0 4.03125C0 1.82211 1.79086 0.03125 4 0.03125H14.1453C27.5372 0.03125 38.3934 12.8794 38.3934 28.7285C38.3934 44.5776 27.5372 57.4258 14.1453 57.4258H4C1.79086 57.4258 0 55.6349 0 53.4258V4.03125Z" fill="#2BC155" />
+               </svg>
+            </div>
+            <ul class="text-left mb-0">
+               <li class="position-relative">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M8.15722 19.7714V16.7047C8.1572 15.9246 8.79312 15.2908 9.58101 15.2856H12.4671C13.2587 15.2856 13.9005 15.9209 13.9005 16.7047V16.7047V19.7809C13.9003 20.4432 14.4343 20.9845 15.103 21H17.0271C18.9451 21 20.5 19.4607 20.5 17.5618V17.5618V8.83784C20.4898 8.09083 20.1355 7.38935 19.538 6.93303L12.9577 1.6853C11.8049 0.771566 10.1662 0.771566 9.01342 1.6853L2.46203 6.94256C1.86226 7.39702 1.50739 8.09967 1.5 8.84736V17.5618C1.5 19.4607 3.05488 21 4.97291 21H6.89696C7.58235 21 8.13797 20.4499 8.13797 19.7714V19.7714" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Dashboard 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.10254 9.22725H20.9069" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.9348 13.5664H15.9451" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.0051 13.5664H11.0154" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.06372 13.5664H6.07401" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.9348 17.8845H15.9451" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M11.0051 17.8845H11.0154" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.06372 17.8845H6.07401" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.4927 1V4.65642" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M6.51809 1V4.65642" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7092 2.75464H6.30107C3.03808 2.75464 1 4.57234 1 7.91356V17.9687C1 21.3625 3.03808 23.2222 6.30107 23.2222H15.6989C18.9722 23.2222 21 21.394 21 18.0528V7.91356C21.0103 4.57234 18.9825 2.75464 15.7092 2.75464Z" stroke="#717579" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Calendar 
+                  </a>
+               </li>
+               <li class="position-relative mt-2 active">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M11.4923 2.78906H7.7533C4.6783 2.78906 2.75031 4.96606 2.75031 8.04806V16.3621C2.75031 19.4441 4.6693 21.6211 7.7533 21.6211H16.5773C19.6623 21.6211 21.5813 19.4441 21.5813 16.3621V12.3341" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82782 10.9205L16.3008 3.4475C17.2318 2.5175 18.7408 2.5175 19.6718 3.4475L20.8888 4.6645C21.8198 5.5955 21.8198 7.1055 20.8888 8.0355L13.3798 15.5445C12.9728 15.9515 12.4208 16.1805 11.8448 16.1805H8.09882L8.19282 12.4005C8.20682 11.8445 8.43382 11.3145 8.82782 10.9205Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M15.1652 4.60156L19.7312 9.16756" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Create New Ads 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50083 13.7871V13.5681C3.53295 12.9202 3.7406 12.2925 4.10236 11.7496C4.7045 11.0975 5.1167 10.2983 5.29571 9.43598C5.29571 8.7695 5.29571 8.0935 5.35393 7.42703C5.65469 4.21842 8.82728 2 11.9611 2H12.0387C15.1725 2 18.345 4.21842 18.6555 7.42703C18.7137 8.0935 18.6555 8.7695 18.704 9.43598C18.8854 10.3003 19.2972 11.1019 19.8974 11.7591C20.2618 12.2972 20.4698 12.9227 20.4989 13.5681V13.7776C20.5206 14.648 20.2208 15.4968 19.6548 16.1674C18.907 16.9515 17.8921 17.4393 16.8024 17.5384C13.607 17.8812 10.383 17.8812 7.18762 17.5384C6.09914 17.435 5.08576 16.9479 4.33521 16.1674C3.778 15.4963 3.48224 14.6526 3.50083 13.7871Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M9.55493 20.8516C10.0542 21.4782 10.7874 21.8838 11.5922 21.9785C12.3971 22.0732 13.2072 21.8493 13.8433 21.3562C14.0389 21.2103 14.2149 21.0408 14.3672 20.8516" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Notification 
+                  </a>
+               </li>
+               <li class="position-relative mt-2">
+                  <a href="#" class="d-block">
+                     <div class="icon p-1 d-inline-block border-2 mr-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M21.6389 14.3962H17.5906C16.1042 14.3953 14.8993 13.1914 14.8984 11.7049C14.8984 10.2185 16.1042 9.01458 17.5906 9.01367H21.6389" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M18.0486 11.6432H17.7369" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.74766 3H16.3911C19.2892 3 21.6388 5.34951 21.6388 8.24766V15.4247C21.6388 18.3229 19.2892 20.6724 16.3911 20.6724H7.74766C4.84951 20.6724 2.5 18.3229 2.5 15.4247V8.24766C2.5 5.34951 4.84951 3 7.74766 3Z" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M7.03558 7.53772H12.4345" stroke="#757971" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     Payment 
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="panal position-relative bg-light min-vh-100 ">
+            <div class="top-menu d-flex bg-white w-100 px-2 align-items-center py-1 position-sticky top-0 z-5">
+               <form action="#" class="d-flex align-items-center bg-light mr-3 pl-2 rounded-pill">
+                  <svg class="d-block" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10.0617 19.3113C12.2963 19.3114 14.4669 18.5956 16.2298 17.2772L22.8806 23.6629C23.3774 24.1236 24.1691 24.1104 24.6489 23.6334C25.117 23.1681 25.117 22.4303 24.6489 21.965L17.9981 15.5793C21.4053 11.3681 20.6119 5.3023 16.2259 2.03089C11.8399 -1.24052 5.52239 -0.478718 2.11519 3.73247C-1.29201 7.94365 -0.49859 14.0095 3.8874 17.2809C5.65315 18.5979 7.82573 19.3124 10.0617 19.3113ZM4.71787 4.52615C7.66923 1.69235 12.4543 1.6923 15.4058 4.52604C18.3572 7.35978 18.3572 11.9542 15.4059 14.788C12.4545 17.6218 7.66939 17.6218 4.71797 14.7881C4.71792 14.788 4.71792 14.788 4.71787 14.788C1.7665 11.9749 1.74911 7.39723 4.67897 4.56349C4.69192 4.55101 4.70487 4.53858 4.71787 4.52615Z" fill="#2BC155" />
+                  </svg>
+                  <input type="search" placeholder="Search here" class="bg-transparent px-2 py-15" />
+               </form>
+               <div class="notification w-12 h-12 text-center p-1 d-flex align-items-center justify-content-center bg-light mr-15 rounded-circle position-relative ml-auto">
+                  <span class="w-12 h-auto d-inline-block">
+                     <svg class="w-5 m-auto" width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.08431 15.0856V14.8301C1.12179 14.0743 1.36404 13.3419 1.78609 12.7085C2.4886 11.9477 2.9695 11.0153 3.17834 10.0093C3.17834 9.23174 3.17834 8.44307 3.24626 7.66551C3.59715 3.92214 7.2985 1.33398 10.9546 1.33398H11.0451C14.7012 1.33398 18.4026 3.92214 18.7648 7.66551C18.8327 8.44307 18.7648 9.23174 18.8214 10.0093C19.033 11.0177 19.5134 11.9529 20.2136 12.7196C20.6388 13.3474 20.8815 14.0771 20.9154 14.8301V15.0745C20.9407 16.09 20.5909 17.0803 19.9306 17.8626C19.0581 18.7774 17.8741 19.3465 16.6028 19.4622C12.8748 19.8621 9.11355 19.8621 5.38557 19.4622C4.11568 19.3415 2.93339 18.7732 2.05775 17.8626C1.40768 17.0797 1.06262 16.0953 1.08431 15.0856Z" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8.14743 23.3281C8.72992 24.0592 9.5853 24.5324 10.5243 24.6429C11.4632 24.7534 12.4084 24.4921 13.1505 23.9168C13.3787 23.7467 13.5841 23.5489 13.7617 23.3281" stroke="#2BC155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                  </span>
+               </div>
+               <div class="setting w-12 h-12 text-center p-1 d-flex align-items-center justify-content-center bg-light rounded-circle mr-15 position-relative">
+                  <span class="w-12 h-auto d-inline-block">
+                     <svg class="w-5 m-auto" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2744 7.89466L21.5482 6.63456C20.9339 5.56832 19.5725 5.20049 18.5048 5.81228V5.81228C17.9965 6.11168 17.3901 6.19663 16.8191 6.04838C16.2482 5.90014 15.7597 5.53088 15.4613 5.02205C15.2693 4.69862 15.1662 4.33024 15.1623 3.95416V3.95416C15.1796 3.35121 14.9521 2.76692 14.5317 2.3344C14.1112 1.90187 13.5336 1.65795 12.9304 1.6582H11.4674C10.8764 1.6582 10.3098 1.89368 9.89296 2.31255C9.47609 2.73142 9.24333 3.29914 9.24617 3.89009V3.89009C9.22866 5.11019 8.23452 6.09006 7.01429 6.08993C6.63821 6.08603 6.26983 5.98288 5.9464 5.79093V5.79093C4.8787 5.17913 3.51726 5.54696 2.90292 6.6132L2.12336 7.89466C1.50977 8.95957 1.87259 10.3202 2.93496 10.9381V10.9381C3.62551 11.3368 4.05091 12.0736 4.05091 12.871C4.05091 13.6684 3.62551 14.4052 2.93496 14.8039V14.8039C1.87394 15.4177 1.51072 16.775 2.12336 17.8367V17.8367L2.86021 19.1075C3.14805 19.6269 3.631 20.0101 4.20218 20.1725C4.77337 20.3348 5.38571 20.2628 5.90368 19.9725V19.9725C6.41289 19.6753 7.01968 19.5939 7.58919 19.7463C8.1587 19.8987 8.64373 20.2723 8.93648 20.7841C9.12844 21.1075 9.23159 21.4759 9.23549 21.8519V21.8519C9.23549 23.0846 10.2347 24.0838 11.4674 24.0838H12.9304C14.1589 24.0838 15.1564 23.0911 15.1623 21.8626V21.8626C15.1594 21.2698 15.3936 20.7005 15.8128 20.2813C16.232 19.8621 16.8013 19.6279 17.3942 19.6307C17.7693 19.6408 18.1362 19.7435 18.462 19.9298V19.9298C19.5269 20.5433 20.8875 20.1805 21.5055 19.1182V19.1182L22.2744 17.8367C22.572 17.3259 22.6537 16.7175 22.5014 16.1462C22.349 15.575 21.9753 15.088 21.4628 14.7932V14.7932C20.9503 14.4984 20.5766 14.0115 20.4242 13.4402C20.2719 12.869 20.3536 12.2606 20.6512 11.7497C20.8447 11.4118 21.1249 11.1317 21.4628 10.9381V10.9381C22.5188 10.3205 22.8808 8.96786 22.2744 7.90534V7.90534V7.89466Z" stroke="#FD6162" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <ellipse cx="12.2042" cy="12.8704" rx="3.07551" ry="3.07551" stroke="#FD6162" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                  </span>
+               </div>
+               <div class="user-profile d-flex align-items-center justify-content-center">
+                  <div class="user-text d-flex flex-column pr-15">
+                     <span class="name font-weight-400 text-sm">Samantha</span>
+                     <span class="sub-name text-xs">Peterdraw.co</span>
+                  </div>
+                  <div class="w-12">
+                     <img src="images/user-img.jpg" class="image w-12 h-12 object-cover overflow-hidden rounded-pill" />
+                  </div>
+               </div>
+            </div>
+            <div class="file-list">
+               <div class="top-line d-flex justify-content-between align-items-center px-2  pt-3 pb-4">
+                  <h1 class="text-3xl mb-0">Create New Ad</h1>
+                  <div class="right-part d-flex align-items-center">
+                     <a href="#"><button class="secondry-btn px-35 py-xl-15 py-15 mr-xl-3 mr-15 text-lg">Save Draft</button></a> 
+                     <a href="#"><button class="prime-btn px-35 py-xl-15 py-15 text-lg">Publish Ads</button></a> 
+                  </div>
+               </div>
+               <div class="creat-ad px-2">
+                  <div class="row">
+                     <div class="col-xl-6 col-12">
+                        <div class="box scroll-box bg-white border-2">
+                           <form class="px-xxl-4 px-xl-25 px-4">
+                              <!-- add name input -->
+                              <div class="form-group mb-0 pt-4">
+                                 <h3 class="mb-1">App Name </h3>
+                                 <select class="input-box border w-100 px-25 py-15 text-sm dark-gray" id="exampleFormControlSelect1">
+                                    <option class="text-black-50">Select App 1</option>
+                                    <option>Select App 2</option>
+                                    <option>Select App 3</option>
+                                    <option>Select App 4</option>
+                                    <option>Select App 5</option>
+                                 </select>
+                              </div>
+                              <!-- ads places input -->
+                              <div class="form-group mb-0 pt-2">
+                                 <h3 class="mb-1"> Ads Places</h3>
+                                 <select class="input-box border w-100 px-25 py-15 text-sm dark-gray" id="exampleFormControlSelect2">
+                                    <option>Ads Places 1</option>
+                                    <option>Ads Places 2</option>
+                                    <option>Ads Places 3</option>
+                                    <option>Ads Places 4</option>
+                                    <option>Ads Places 5</option>
+                                 </select>
+                              </div>
+                              <!-- brand logo input -->
+                              <div class="form-group pt-2 mb-0 text-left">
+                                 <h3 class="mb-0 text-left">Brand Logo</h3>
+                                 <label for="exampleFormControlFile1" class="d-inline-block file-custome p-25 mt-15 mb-0" :>
+                                    <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-1 active">
+                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5742 2H12.3393C5.98264 2 2 6.49918 2 12.8663V30.0472C2 36.4143 5.96577 40.9135 12.3393 40.9135H30.5721C36.9477 40.9135 40.9135 36.4143 40.9135 30.0472V12.8663C40.9135 6.49918 36.9477 2 30.5742 2Z" stroke="#828282" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7682 14.724C18.7682 16.8724 17.0246 18.616 14.8762 18.616C12.7299 18.616 10.9863 16.8724 10.9863 14.724C10.9863 12.5756 12.7299 10.832 14.8762 10.832C17.0246 10.832 18.7682 12.5756 18.7682 14.724Z" stroke="#828282" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                       <path d="M40.9116 27.7213C38.8159 25.8976 36.9922 23.7028 34.5887 22.2544C32.181 20.8059 29.5941 21.6999 27.9243 23.8609C26.3114 25.9503 25.3036 28.7607 22.8685 30.0784C19.8683 31.7039 18.1058 29.0832 15.6032 28.0333C12.8096 26.8632 10.6887 28.9673 9.05681 30.9892C7.42285 33.0132 5.76781 35.0161 4.10645 37.019" stroke="#828282" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                 </label>
+                                 <input type="file" class="form-control-file py-1 mt-1" id="exampleFormControlFile1">
+                                 <a href="#"><button class="prime-btn bg-transparent prime-color ml-xxl-3 ml-15 px-xxl-35 px-2 py-xxl-15 py-1 mr-xxl-3 mr-15  border">Upload</button></a> 
+                                 <a href="#"><button class="secondry-btn bg-transparent dark-gray px-xxl-3 px-xxl-3 px-2 py-xxl-15 py-1">Remove</button></a> 
+                              </div>
+                              <!-- brand name input -->
+                              <div class="form-group pt-2 mb-0">
+                                 <label for="exampleInputbrand-name" class="mb-0">
+                                    <h3 class="mb-1">Brand Name</h3>
+                                 </label>
+                                 <input type="text" class="input-box border px-25 text-sm w-100 py-15" id="exampleInputbrand-name" placeholder="Damas Jewellery">
+                              </div>
+                              <!-- Campaign Title input -->
+                              <div class="form-group pt-2 mb-0">
+                                 <label for="exampleInputbrand-name" class="mb-0">
+                                    <h3 class="mb-1">Campaign Title</h3>
+                                 </label>
+                                 <input type="text" class="input-box border w-100 px-25 text-sm py-15 " id="exampleInputbrand-name" placeholder="E-commerce Advertisement">
+                              </div>
+                              <!-- Action Button Name  input -->
+                              <div class="form-group pt-2 mb-0">
+                                 <label for="exampleInputbrand-name" class="mb-0">
+                                    <h3 class="mb-1">Poster type</h3>
+                                 </label>
+                                 <input type="text" class="input-box border w-100 px-25 text-sm py-15" id="exampleInputbrand-name" placeholder="Select Poster Type">
+                              </div>
+                              <!-- Ads Click URL input -->
+                              <div class="form-group pt-2 mb-0">
+                                 <label for="exampleInputbrand-name" class="mb-0">
+                                    <h3 class="mb-1">Ads Click URL</h3>
+                                 </label>
+                                 <input type="url" class="input-box border w-100 px-25 text-sm py-15" id="exampleInputbrand-name" placeholder="http://dummy.reset.resetpiexample.com
+                                    ">
+                              </div>
+                              <!-- calander input  -->
+                              <div class="form-row pt-2 dark-gray text-sm">
+                                 <div class="form-group col mb-0 pr-0">
+                                    <label for="cname"  class="mb-0 d-block">
+                                       <h3 class="mb-0">Start Date</h3>
+                                    </label>
+                                    <input type="date" class="input-box border drak-gray w-100 px-25 text-sm py-15 mt-1 iconRight icon-1" id="cname" value="02-02-2022">
+                                 </div>
+                                 <div class="form-group col mb-0 pr-0">
+                                    <label for="cname"  class="mb-0 d-block">
+                                       <h3 class="mb-0">End Date</h3>
+                                    </label>
+                                    <input type="date" class="input-box border drak-gray w-100 px-25 text-sm py-15 mt-1 iconRight icon-1" id="cname" value="03-02-2022">
+                                 </div>
+                              </div>
+                              <!-- price input  -->
+                              <div class="form-row pt-2">
+                                 <div class="form-group col mb-0 pr-0">
+                                    <label for="cname"  class="mb-0 d-block">
+                                       <h3 class="mb-0">Gross price </h3>
+                                    </label>
+                                    <input type="text" class="input-box border w-100 px-25 text-sm py-15 mt-1" id="cname" placeholder="$14,67">
+                                 </div>
+                                 <div class="form-group col mb-0 pr-0">
+                                    <label for="cname"  class="mb-0 d-block">
+                                       <h3 class="mb-0">Tex price </h3>
+                                    </label>
+                                    <input type="text" class="input-box border w-100 px-25 text-sm py-15 mt-1" id="cname" placeholder="$14,67">
+                                 </div>
+                                 <div class="form-group col mb-0 pr-0">
+                                    <label for="cname"  class="mb-0 d-block">
+                                       <h3 class="mb-0">Net Price </h3>
+                                    </label>
+                                    <input type="text" class="input-box border w-100 px-25 text-sm py-15 mt-1" id="cname" placeholder="$14,67">
+                                 </div>
+                              </div>
+                              <!-- Payment method   input -->
+                              <div class="form-group mb-0 pt-2">
+                                 <h3 class="mb-1"> Payment method  </h3>
+                                 <select class="input-box border w-100 px-25 py-15 text-sm dark-gray" id="exampleFormControlSelect2">
+                                    <option>Select payment 1</option>
+                                    <option>Select payment 2</option>
+                                    <option>Select payment 3</option>
+                                    <option>Select payment 4</option>
+                                    <option>Select payment 5</option>
+                                 </select>
+                              </div>
+                              <!-- Ads State  input -->
+                              <div class="form-group mb-0 py-2">
+                                 <h3 class="mb-1">Ads State  </h3>
+                                 <select class="input-box border w-100 px-25 py-15 text-sm dark-gray" id="exampleFormControlSelect2">
+                                    <option>Draft 1</option>
+                                    <option>Draft 2</option>
+                                    <option>Draft 3</option>
+                                    <option>Draft 4</option>
+                                    <option>Draft 5</option>
+                                 </select>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-12">
+                        <div class="box bg-white border-2 px-xxl-5 px-xl-25 px-5 pb-4 mt-xl-0 mt-5">
+                           <h2 class="mb-0 pt-2">Upload Images</h2>
+                           <div class="upload-box mt-3">
+                              <div class="image-box bg-light m-15">
+                                 <label for="exampleFormControlFile2" class="d-block">
+                                    <div class="image text-center px-5 d-flex align-items-center justify-content-center flex-column">
+                                       <input type="file" class="form-control-file py-1 mt-1" id="exampleFormControlFile2" accept="image/,Video/">
+                                       <div class="icon">
+                                          <svg width="81" height="81" viewBox="0 0 88 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M62.9773 3H24.9177C11.6504 3 3.33789 12.3906 3.33789 25.68V61.5393C3.33789 74.8287 11.6151 84.2192 24.9177 84.2192H62.9729C76.2799 84.2192 84.5571 74.8287 84.5571 61.5393V25.68C84.5571 12.3906 76.2799 3 62.9773 3Z" stroke="#828282" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M38.3349 29.5576C38.3349 34.0416 34.6957 37.6808 30.2116 37.6808C25.732 37.6808 22.0928 34.0416 22.0928 29.5576C22.0928 25.0735 25.732 21.4343 30.2116 21.4343C34.6957 21.4343 38.3349 25.0735 38.3349 29.5576Z" stroke="#828282" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                             <path d="M84.5561 56.6861C80.182 52.8797 76.3756 48.2988 71.3591 45.2757C66.3338 42.2526 60.9344 44.1184 57.4493 48.6288C54.0829 52.9897 51.9795 58.8555 46.897 61.6058C40.6351 64.9985 36.9563 59.5288 31.733 57.3374C25.9024 54.8951 21.4755 59.2868 18.0696 63.5068C14.6592 67.7312 11.2049 71.9117 7.7373 76.0921" stroke="#828282" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                          <p class="pt-25"> <span>Upload a file</span> or drag and drop Image &Video PNG, JPG, GIF up to 10MB</p>
+                                       </div>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="right-part d-flex justify-content-end  pt-15">
+                           <a href="#"><button class="secondry-btn px-35 py-15 mr-3">Cancel</button></a> 
+                           <a href="#"><button class="prime-btn px-35 py-15" data-toggle="modal" data-target="#ad-preview">Preview</button></a> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade bd-example-modal-lg backdrop-fillter" id="ad-preview" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered max-w-screen-md px-15 px-lg-3" role="document">
+            <div class="modal-content bg-white py-3 px-3 px-lg-3">
+               <div class="modal-body p-0">
+                  <div class="ad-preview">
+                     <h1>Ads Preview</h1>
+                     <div>
+                        <img src="images/ad-preview.png" alt="">
+                     </div>
+                     <button type="button" class="prime-btn px-35 py-xl-15 py-15 text-lg d-flex justify-content-end" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--------js-------->
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/Dlex.js"></script>
+   </body>
+</html>

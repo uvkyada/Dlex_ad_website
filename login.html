@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>login - Admin</title>
+       <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="css/theme.css">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!-- <div class="continer"> -->
+      <div class="login-main vh-100 d-flex align-items-center justify-content-center">
+         <div class="login">
+            <div class="logo text-center">
+               <svg width="101" height="40" viewBox="0 0 101 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M38.447 8.75V29.8878H46.244C52.6354 29.8878 56.3933 25.9619 56.3933 19.2676C56.3933 12.5732 52.6206 8.75 46.244 8.75H38.447ZM42.2642 11.9434H45.8445C50.1055 11.9434 52.5022 14.5508 52.5022 19.2823C52.5022 24.1015 50.135 26.6944 45.8445 26.6944H42.2642V11.9434Z" fill="white"/>
+                  <path d="M59.1599 29.8878H62.8438V8.75H59.1599V29.8878Z" fill="white"/>
+                  <path d="M76.3664 25.2441C75.9669 26.5332 74.6649 27.3827 72.9487 27.3827C70.5372 27.3827 68.9984 25.7128 68.9984 23.2226V23.0028H79.9615V21.8163C79.9615 17.0996 77.1801 14.0381 72.7268 14.0381C68.1995 14.0381 65.3293 17.2753 65.3293 22.1826C65.3293 27.1337 68.17 30.1952 72.8748 30.1952C76.5883 30.1952 79.3402 28.1738 79.8136 25.2441H76.3664ZM72.7416 16.8652C74.8573 16.8652 76.2776 18.4033 76.3516 20.6006H69.0281C69.1761 18.4326 70.6704 16.8652 72.7416 16.8652Z" fill="white"/>
+                  <path d="M88.2024 24.3212L91.4573 29.8877H95.4815L90.4956 22.0361L95.5407 14.3604H91.5017L88.3799 19.8096H88.3059L85.1398 14.3604H80.9972L86.0127 22.1386L80.9529 29.8877H84.8736L88.1284 24.3212H88.2024Z" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1599 34.9998C23.5223 34.9943 30.2997 28.2808 30.2997 19.9999C30.2997 11.719 23.5223 5.00539 15.1599 5C21.0851 7.45153 25.2487 13.2443 25.2487 19.9999C25.2487 26.7554 21.0851 32.5481 15.1599 34.9998Z" fill="white" fill-opacity="0.16"/>
+                  <path d="M0 9.00024C0 6.79111 1.79086 5.00024 4 5.00024H8.83769C17.2047 5.00024 23.9875 11.7159 23.9875 20.0001C23.9875 28.2843 17.2047 34.9999 8.83769 34.9999H4C1.79086 34.9999 0 33.2091 0 30.9999V9.00024Z" fill="white"/>
+               </svg>
+            </div>
+            <div class="from bg-white p-4 rounded mt-3">
+               <form action="#">
+                  <h6 class="mb-0 text-center login mb-15">Login</h6>
+                  <span class="text-center">Don't have an account yet? <a href="signup.html">Create an account</a> </span>
+                  <div class="google mt-2">
+                     <a href="#" class="d-flex justify-content-center align-items-center py-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M22.5011 12.2331C22.5011 11.3698 22.4296 10.7398 22.2749 10.0864H12.2153V13.9831H18.1201C18.0011 14.9514 17.3582 16.4097 15.9296 17.3897L15.9095 17.5202L19.0902 19.9349L19.3106 19.9564C21.3344 18.1248 22.5011 15.4297 22.5011 12.2331Z" fill="#4285F4"/>
+                           <path d="M12.2147 22.5001C15.1075 22.5001 17.5361 21.5667 19.3099 19.9567L15.929 17.3899C15.0242 18.0083 13.8099 18.44 12.2147 18.44C9.38142 18.44 6.97669 16.6084 6.11947 14.0767L5.99382 14.0871L2.68656 16.5955L2.64331 16.7133C4.4052 20.1433 8.02422 22.5001 12.2147 22.5001Z" fill="#34A853"/>
+                           <path d="M6.11998 14.0767C5.89379 13.4234 5.76289 12.7233 5.76289 12C5.76289 11.2766 5.89379 10.5767 6.10808 9.92334L6.10208 9.78422L2.75337 7.2356L2.64381 7.28667C1.91765 8.70999 1.50098 10.3084 1.50098 12C1.50098 13.6917 1.91765 15.29 2.64381 16.7133L6.11998 14.0767Z" fill="#FBBC05"/>
+                           <path d="M12.2148 5.55997C14.2266 5.55997 15.5838 6.41164 16.3576 7.12335L19.3814 4.23C17.5243 2.53834 15.1076 1.5 12.2148 1.5C8.0243 1.5 4.4052 3.85665 2.64331 7.28662L6.10759 9.92332C6.97672 7.39166 9.3815 5.55997 12.2148 5.55997Z" fill="#EB4335"/>
+                        </svg>
+                        <h3 class="mb-0 ml-1"> Sign up with Google</h3>
+                     </a>
+                  </div>
+                  <div class="or mt-2 text-center"><span>OR</span></div>
+                  <div class="form-group pt-15 mb-0">
+                     <label for="exampleInputbrand-name" class="mb-0">
+                        <h5 class="text-left">Enter Your Username</h5>
+                     </label>
+                     <input type="text" class="form-control py-2" id="exampleInputbrand-name" placeholder="" autocomplete="off">
+                  </div>
+                  <div class="form-group pt-2 mb-0">
+                     <label for="exampleInputbrand-name" class="mb-0">
+                        <h5 class=" text-left">Enter Your Password</h5>
+                     </label>
+                     <input type="password" class="form-control py-2" id="exampleInputbrand-name" placeholder="" autocomplete="off">
+                  </div>
+                  <a href="forgotpassword.html" class="text-right d-block pt-1">Forgot Password</a>
+                  <input type="submit" value=" py-4" class="submit w-100 mt-25 py-2 text-white">
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- </div> -->
+      <script src="js/jquery.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/Dlex.js"></script>
+   </body>
+</html>
